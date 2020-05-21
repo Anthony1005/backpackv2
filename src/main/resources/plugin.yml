@@ -1,0 +1,19 @@
+name: Backpack
+main: main.Main
+version: 1.0
+commands:
+  test:
+  gui:
+  save:
+  load:
+
+permissions:
+  gui.1:
+    default: true
+    description: test
+  gui.2:
+    description: test
+  gui.3:
+    description: test
+  gui.4:
+    description: test
