@@ -4,8 +4,6 @@ version: 1.0
 commands:
   test:
   gui:
-  save:
-  load:
 
 permissions:
   gui.1:

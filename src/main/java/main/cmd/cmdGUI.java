@@ -1,6 +1,7 @@
 package main.cmd;
 
 import main.Main;
+import main.functions.PluginFunctions;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -36,9 +37,10 @@ public class cmdGUI implements CommandExecutor {
             return false;
         }
         Inventory inv = Bukkit.createInventory(null, invSize, "§b背包");
-        ArrayList<ItemStack> pre = load(player.getUniqueId().toString());
-        for (int i = 0; i < pre.size(); i++) {
-            ItemStack item = pre.get(i);
+        PluginFunctions functions = new PluginFunctions(player.getUniqueId().toString());
+        ArrayList<ItemStack> items = functions.load();
+        for(int i =0; i < items.size(); i++){
+            ItemStack item = items.get(i);
             inv.addItem(item);
         }
         player.openInventory(inv);
